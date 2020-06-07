@@ -13,6 +13,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        System.out.println("2. Start begins");
+
         primaryStage.setTitle("Life Cycle");
 
         FlowPane root = new FlowPane(Orientation.VERTICAL, 5 ,5);
@@ -22,6 +24,17 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    @Override
+    public void init() throws Exception {
+        super.init();
+        System.out.println("1. Init begins");
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        System.out.println("3. Stop invoked");
+    }
 
     public static void main(String[] args) {
         launch(args);
